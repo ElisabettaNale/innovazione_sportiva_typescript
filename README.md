@@ -4,7 +4,7 @@
   <ol>
     <li><a href="#il-progetto">Il progetto: Innovazione sportiva, startup, incentivi e cittadini connessi</a></li>
     <li><a href="#funzionalità">Funzionalità</a></li>
-    <li><a href="#struttura-del-codice">Struttura del codice</a><li>
+    <li><a href="#struttura-del-codice">Struttura del codice</a></li>
     <li><a href="#link-al-sito">Link</a></li>
     <li><a href="#utilizzo">Utilizzo</a></li>
     <li><a href="#contribuire">Contribuire</a></li>
