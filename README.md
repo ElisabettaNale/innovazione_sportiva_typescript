@@ -17,17 +17,17 @@
 <!-- IL PROGETTO -->
 ## Il progetto
 
-Questo progetto è un'applicazione sviluppata in TypeScript che simula un sistema di interazione tra startup innovative nel settore sportivo, incentivi statali volti a promuovere l'innovazione e cittadini interessati a partecipare alle attività proposte da queste aziende.<br><br>
+Questo progetto è un'applicazione sviluppata in TypeScript che simula un sistema di interazione tra startup innovative nel settore sportivo, incentivi statali volti a promuovere l'innovazione e cittadini interessati a partecipare alle attività proposte da queste aziende.<br>
 
-L'obiettivo è creare un modello in cui gli incentivi statali siano assegnati alle startup che rispettano i requisiti, stimolando lo sviluppo tecnologico e favorendo la crescita economica, mentre i cittadini traggono beneficio dalle attività e dai servizi innovativi offerti.<br><br>
+L'obiettivo è creare un modello in cui gli incentivi statali siano assegnati alle startup che rispettano i requisiti, stimolando lo sviluppo tecnologico e favorendo la crescita economica, mentre i cittadini traggono beneficio dalle attività e dai servizi innovativi offerti.<br>
 
-L'applicazione dimostra come la tecnologia possa semplificare la gestione delle risorse pubbliche e incentivare la partecipazione attiva della comunità, rendendo accessibili sia le opportunità offerte dalle startup che i vantaggi degli incentivi statali.<br><br>
+L'applicazione dimostra come la tecnologia possa semplificare la gestione delle risorse pubbliche e incentivare la partecipazione attiva della comunità, rendendo accessibili sia le opportunità offerte dalle startup che i vantaggi degli incentivi statali.<br>
 
 
 <!-- FUNZIONALITà -->
 ## Funzionalità
 
-- **Assegnazione degli incentivi**: Gli incentivi vengono associati alle startup se queste soddisfano i criteri di eligibilità definiti (settore e limite massimo di fatturato).
+- **Assegnazione degli incentivi**: Gli incentivi vengono associati alle startup se queste soddisfano i criteri di eleggibilità definiti (settore e limite massimo di fatturato).
 L’assegnazione è automatizzata tramite un doppio ciclo che confronta incentivi e startup.
 Per ogni incentivo se si verifica che una startup rispetta i criteri, l'incentivo viene assegnato alla startup.
 - **Interazione con i cittadini**: I cittadini, definiti con nome, età e interessi, possono partecipare alle attività organizzate da specifiche startup.
@@ -37,7 +37,7 @@ I cittadini partecipano alle attività di alcune startup, con una semplice simul
 <!-- Struttura -->
 ## Struttura del codice
 
-### Tipi e Interfacce
+### Interfacce
 
 - **`IStartup`**: Interfaccia per le startup.
 - **`IIncentivo`**: Interfaccia per gli incentivi.
@@ -66,7 +66,7 @@ I cittadini partecipano alle attività di alcune startup, con una semplice simul
 <!-- LINK -->
 ## Link al sito 
 
-**Clicca qui:** https://codepen.io/ElisabettaNale/pen/azooNxr?editors=0011
+**Clicca qui:** [CodePen](https://codepen.io/ElisabettaNale/pen/azooNxr?editors=0011/)
 
 
 <!-- UTILIZZO -->

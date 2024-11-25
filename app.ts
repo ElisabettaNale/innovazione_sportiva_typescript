@@ -1,14 +1,14 @@
 //////////////////////////////////////////////////////
-// Definizione tipologi di dato, interfacce e classi
+// Definizione tipologie di dato, interfacce e classi
 //////////////////////////////////////////////////////
 
-// Tipo criteriEligibilita
-type criteriEligibilita = {
+// Tipo criteriEleggibilità
+type criteriEleggibilita = {
     fatturatoMax: number;
     settore: string;
 };
    
-// Interfaces
+// Interfacce
 interface IStartup {
     nome: string;
     settore: string;
@@ -20,7 +20,7 @@ interface IStartup {
 interface IIncentivo {
     id: number;
     descrizione: string;
-    criteriEligibilita: criteriEligibilita;
+    criteriEleggibilita: criteriEleggibilita;
     assegnaAStartup(startup: IStartup): void;
 }
 
@@ -59,7 +59,7 @@ class Startup implements IStartup {
 
     riceviIncentivo(incentivo: IIncentivo): void {
         this.incentiviRicevuti.push(incentivo);
-        console.log(`Startup ${this.nome} ha ricevuto l'incentivo: ${incentivo.descrizione}.`);
+        console.log(`Startup ${this.nome} ha ricevuto l'incentivo: ${incentivo.descrizione}`);
     };
 
 }
@@ -68,21 +68,21 @@ class Incentivo implements IIncentivo {
    
     id: number;
     descrizione: string;
-    criteriEligibilita: criteriEligibilita;
+    criteriEleggibilita: criteriEleggibilita;
 
     constructor(id: number,
                 descrizione: string,
-                criteriEligibilita: criteriEligibilita
+                criteriEleggibilita: criteriEleggibilita
     ) {
         this.id = id;
         this.descrizione = descrizione;
-        this.criteriEligibilita = criteriEligibilita;
-        console.log(`Incentivo nr. ${this.id}.\n${this.descrizione}\nCriteri di eligibilità: settore ${this.criteriEligibilita.settore} e fatturato < ${this.criteriEligibilita.fatturatoMax}€.`);
+        this.criteriEleggibilita = criteriEleggibilita;
+        console.log(`Incentivo nr. ${this.id}.\n${this.descrizione}\nCriteri di eligibilità: settore ${this.criteriEleggibilita.settore} e fatturato < ${this.criteriEleggibilita.fatturatoMax}€.`);
     }
 
-    verificaEligibilita(startup: Startup): boolean {
-        return this.criteriEligibilita.settore === startup.settore &&
-               startup.fatturato < this.criteriEligibilita.fatturatoMax;
+    verificaEleggibilita(startup: Startup): boolean {
+        return this.criteriEleggibilita.settore === startup.settore &&
+               startup.fatturato < this.criteriEleggibilita.fatturatoMax;
     }
 
     assegnaAStartup(startup: IStartup): void {
@@ -154,19 +154,19 @@ let fatturato3: number = 2000000;
 // Incentivo 1
 let id1: number = 1;
 let spiegazione1: string = `Finanziamento a fondo perduto per favorire l'adozione di algoritmi di intelligenza artificiale.`;
-let criteriEligibilita1: criteriEligibilita = {fatturatoMax: 100000000, 
+let criteriEleggibilita1: criteriEleggibilita = {fatturatoMax: 10000000, 
                                                settore: "AI-driven injury prevention"};
 
 // Incentivo 2
 let id2: number = 2;
 let spiegazione2: string = `Esonero dalle imposte sul reddito. Favorire l'innovazione tecnologica`;
-let criteriEligibilita2: criteriEligibilita = {fatturatoMax: 10000000, 
+let criteriEleggibilita2: criteriEleggibilita = {fatturatoMax: 10000000, 
                                                settore: "AI-driven injury prevention"};
 
 // Incentivo 3
 let id3: number = 3;
 let spiegazione3: string = `Detrazioni fiscali sulle spese di sviluppo di software.`
-let criteriEligibilita3: criteriEligibilita = {fatturatoMax: 10000000, 
+let criteriEleggibilita3: criteriEleggibilita = {fatturatoMax: 10000000, 
                                                settore: "digital fitness"};
    
 // Cittadino 1
@@ -198,7 +198,7 @@ let interessiSportivi3: string[] = ["automobilismo",
 //////////////////////////////////////////////////////
 
 // Istanze
-console.log("STARTUPs")
+console.log("STARTUP")
 let startup1: Startup = new Startup(nome1,
                                     settore1,
                                     descrizione1,
@@ -217,13 +217,13 @@ let startup3: Startup = new Startup(nome3,
 console.log("INCENTIVI")
 let incentivo1: Incentivo = new Incentivo(id1,
                                           spiegazione1,
-                                          criteriEligibilita1);  
+                                          criteriEleggibilita1);  
 let incentivo2: Incentivo = new Incentivo(id2,
                                           spiegazione2,
-                                          criteriEligibilita2);  
+                                          criteriEleggibilita2);  
 let incentivo3: Incentivo = new Incentivo(id3,
                                           spiegazione3,
-                                          criteriEligibilita3); 
+                                          criteriEleggibilita3); 
 console.log("CITTADINI")
 let cittadino1: Cittadino = new Cittadino(nomePersona1,
                                           cognomePersona1,
@@ -244,7 +244,7 @@ let startups: Startup[] = [startup1, startup2, startup3];
 let incentivi: Incentivo[] = [incentivo1, incentivo2, incentivo3];
 for (let incentivo of incentivi) {
     for (let startup of startups) {
-        if (incentivo.verificaEligibilita(startup)) {
+        if (incentivo.verificaEleggibilita(startup)) {
             incentivo.assegnaAStartup(startup);
             startup.riceviIncentivo(incentivo);
         }
