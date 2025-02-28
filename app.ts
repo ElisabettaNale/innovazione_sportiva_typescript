@@ -252,7 +252,7 @@ for (let incentivo of incentivi) {
 };
 
 // Partecipazione cittadini alle attività proposte
-console.log("PARTECIPAZIONE CIITADINI ALLE ATTVITA' PROPOSTE");
+console.log("PARTECIPAZIONE CITTADINI ALLE ATTIVITA' PROPOSTE");
 cittadino1.partecipaAttivita(startup2);
 cittadino2.partecipaAttivita(startup3);
 cittadino3.partecipaAttivita(startup2);                                                                                              
